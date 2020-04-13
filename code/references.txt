@@ -1,0 +1,5 @@
+book: N/A (I'm in quarantine in Prescott, Arizona and my teammate Ali was supposed to do the first half of this project because he was considering dropping his courses; however, he only did the writing part of the first milestone so I'm trying to catch up)
+web-site: https://code-boxx.com/get-started-webassembly-beginners/
+language reference manual: https://webassembly.org/ (I wasn't sure what this meant, but I believe this is a satisfactory resource)
+forum: https://www.quora.com/What-is-Web-Assembly/
+example of a major project: N/A (I'm not certian this applies to my language as it is an intermediate step between typical web application development languages and a virtual machine included in web browsers)
