@@ -33,12 +33,12 @@ how to view or directly edit WebAssembly code in Ubuntu Linux terminal:
 2. convert WASM to WAT:
     cd .. (navigate out of the directory where WABT was downloaded)
     cd .../foldername (navigate to the directory where the WebAssembly was generated)
-    .../wabt/wasm2wat filename.wasm -o filename.wat
+    .../wabt/bin/wasm2wat filename.wasm -o filename.wat
 3. open WAT:
     nano filename.wat
     view or directly edit WebAssembly code
     Ctrl+O (save)
     Ctrl+X (exit)
 4. if you directly edited the WebAssembly code, convert WAT to WASM (this will overwrite):
-    .../wabt/wat2wasm filename.wat -o filename.wasm
+    .../wabt/bin/wat2wasm filename.wat -o filename.wasm
     emrun filename.html firefox (to see changes reflected)
