@@ -1,0 +1,3 @@
+1. I am going to screen record a presentation with audio and also demonstrate my code.
+2. I want to present the various data types and control structures.
+3. I'm not sure what else to put here since assembly code is very low-level.
