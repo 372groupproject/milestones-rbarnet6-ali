@@ -6,7 +6,7 @@
 ;                        V
 ;global variables (adjust to model different scenarios) <----------------------------- !!!IMPORTANT Global Variables!!!
 (def objAMass 143823752348) ;mass of object A in kg (point particle)
-(def objBMass 51) ;mass of object B in kg (point particle)
+(def objBMass 100000000000) ;mass of object B in kg (point particle)
 (def objAPos 8) ;distance from object A in m to the right of the origin
 (def objBPos 19) ;distance from object B in m to the right of the origin
 (def ABHeight 1500) ;distance of object A and object B from the earth in m
@@ -47,7 +47,7 @@
 (defn graphABPos [currHeight currPosA currPosB]
   (cond
     (< currHeight 0) "\tEarthEarthEarthEarthEarthEarth"
-    (= currPosA currPosB) (graphCollision currHeight currPosA)
+    (>= currPosA currPosB) (graphCollision currHeight currPosA)
     (= (mod (- ABHeight currHeight) (/ ABHeight 20)) 0) (str (buildLine currHeight currPosA currPosB 30) (graphABPos (- currHeight 1) (getNextPosA (Math/sqrt (/ (- ABHeight (- currHeight 1)) 4.9))) (getNextPosB (Math/sqrt (/ (- ABHeight (- currHeight 1)) 4.9)))))
     :else (graphABPos (- currHeight 1) (getNextPosA (Math/sqrt (/ (- ABHeight (- currHeight 1)) 4.9))) (getNextPosB (Math/sqrt (/ (- ABHeight (- currHeight 1)) 4.9))))))
 
@@ -55,7 +55,6 @@
 (defn -main []
   (cond
     (or (<= objAMass 0) (<= objBMass 0)) (print "error: all masses must be positive")
-    (and (> objAMass 10000000000) (> objBMass 10000000000)) (print "error: collision detection inexplicably malfunctions when both masses are too large")
     (or (< objAPos 0) (< objBPos 0)) (print "error: positions cannot be negative")
     (>= objAPos objBPos) (print "error: position of object A must be less than that of object B")
     (or (>= objAPos 30) (>= objBPos 30)) (print "error: both positions must be less than 30 m")
