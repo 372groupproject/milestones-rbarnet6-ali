@@ -1,4 +1,4 @@
-book: N/A (I'm in quarantine in Prescott, Arizona and my teammate Ali was supposed to do the first half of this project because he was considering dropping his courses; however, he only did the writing part of the first milestone and didn't submit anything so I'm trying to catch up)
+book: N/A
 web-site: https://webassembly.org/
 language reference manual: https://developer.mozilla.org/en-US/docs/WebAssembly
 forum: https://www.quora.com/What-is-Web-Assembly/
